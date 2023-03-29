@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- my CSS -->
+    <link rel="stylesheet" href="/stylesheets/index.css" type="text/css" />
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <title>Donation Drive</title>
+  </head>
+  <body>
+    <div class="card bg-info text-white w-75 m-auto" id="card-form">
+      <div class="card-header text-center">
+        <h1>Total Cash Donation: $<span><%= donations %></span></h1>
+      </div>
+      <div
+        class="card-body m-auto w-100 d-flex flex-column align-items-center justify-content-center"
+      >
+        <p>Give according to one's capacity,</p>
+        <p>Take according to one's need.</p>
+        <div>
+          <button class="btn btn-primary" id="donate">DONATE $10</button>
+          <button class="btn btn-danger" id="redeem">REDEEM $10</button>
+        </div>
+        <h3 class="text-center m-2 p-2"></h3>
+      </div>
+    </div>
+    <!-- socket io -->
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+    <!-- my js file -->
+    <script type="text/javascript" src="/js/index.js"></script>
+  </body>
+</html>
